@@ -12,4 +12,5 @@ func String() {
 	fmt.Println("3")
 	res := fmt.Sprintf("string one, %s, plus string two: %s, and number - %d", strOne, strTwo, intOne)
 	fmt.Println(res)
+	fmt.Printf("Тип переменной x: %T\n", strOne)
 }

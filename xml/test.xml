@@ -1,0 +1,15 @@
+<Feed>
+	<Feed_Version>3</Feed_Version>
+	<Object>
+		<id>1</id>
+		<name>One_Name</name>
+		<family>One_Family</family>
+		<age>99</age>
+	</Object>
+	<Object>
+		<id>2</id>
+		<name>Two_Name</name>
+		<family>Two_Family</family>
+		<age>100</age>
+	</Object>
+</Feed>

@@ -1,23 +1,7 @@
 package main
 
 import (
-	// "education/callback"
-	// "education/arguments"
-	// "education/string"
-	// "education/link"
-	// "education/cycle"
-	// "education/array"
-	// "education/defer"
-	// "education/defer"
-	// "education/struct"
-	// "education/interface"
-	// "education/test"
-	// "education/goroutines"
-	"education/goroutines"
 	"fmt"
-	// "testing"
-	// "reflect"
-	// "reflect"
 )
 
 var startMessage string
@@ -118,7 +102,26 @@ func main() {
 	// test.TestMultiple(t)
 
 	// __GOROUTINE__
-	goroutines.Main()
+	//goroutines.Main()
 
-	fmt.Println("END")
+	// __SOCKET__
+	//socket.Server()
+	//gorilla.Server()
+
+	// __GENERICS__
+	//var a string = "5"
+	//var b string = "10"
+	//fmt.Println(generics.SumGeneric(a, b))
+	//userOne := generics.User{ID: 1}
+	//userTwo := generics.User{ID: 2}
+	//returnUserOne := generics.GetIdGeneric(&userOne)
+	//returnUserTwo := generics.GetIdGenericTwo(&userTwo)
+	//fmt.Println(returnUserOne.ID, returnUserTwo.ID)
+
+	// __ERROR__
+	//if err := myError.Error(); err != nil {
+	//	fmt.Println(err)
+	//}
+
+	// __SYNC__
 }

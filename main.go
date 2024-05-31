@@ -1,6 +1,7 @@
 package main
 
 import (
+	"education/assert_type"
 	"fmt"
 )
 
@@ -100,6 +101,7 @@ func main() {
 	// __TESTING__
 	// t := new(testing.T)
 	// test.TestMultiple(t)
+	// test.SyncTest()
 
 	// __GOROUTINE__
 	//goroutines.Main()
@@ -123,5 +125,60 @@ func main() {
 	//	fmt.Println(err)
 	//}
 
+	// __REQUEST__
+	//request.Request()
+
 	// __SYNC__
+	//syncMy.WithSlice()
+	//syncMy.WithMap()
+
+	// __PROJECTION__
+	//projection.Main()
+
+	// __CONVERT_TYPE__
+	//convert_type.Main()
+
+	// __ASSERT_TYPE__
+	assert_type.Main()
+
+	// __DATABASE__
+	//database.Main()
+
+	// __CTX__
+	//ctx.Main()
+}
+
+type IStruct interface {
+	changeName(newName string, printer IStruct)
+	printName()
+	changeNameAfter()
+}
+type One struct {
+	Name string
+}
+
+func (o *One) changeName(newName string, printer IStruct) {
+	o.Name = newName
+	printer.printName()
+	printer.changeNameAfter()
+}
+
+func (o *One) printName() {
+	fmt.Println(o.Name)
+}
+func (o *One) changeNameAfter() {
+	fmt.Println("changeNameAfter")
+}
+
+type Two struct {
+	One
+}
+
+func (o *Two) changeNameAfter() {
+	fmt.Println("Before: ", o.Name)
+	o.Name = fmt.Sprintf("Change_%s", o.Name)
+	fmt.Println(o.Name)
+}
+func (o *Two) printName() {
+	fmt.Println("Ничего я тебе не принтану!")
 }

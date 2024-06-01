@@ -1,7 +1,6 @@
 package main
 
 import (
-	"education/assert_type"
 	"fmt"
 )
 
@@ -111,14 +110,17 @@ func main() {
 	//gorilla.Server()
 
 	// __GENERICS__
-	//var a string = "5"
-	//var b string = "10"
-	//fmt.Println(generics.SumGeneric(a, b))
-	//userOne := generics.User{ID: 1}
-	//userTwo := generics.User{ID: 2}
-	//returnUserOne := generics.GetIdGeneric(&userOne)
-	//returnUserTwo := generics.GetIdGenericTwo(&userTwo)
-	//fmt.Println(returnUserOne.ID, returnUserTwo.ID)
+	//int64Slice := []int64{20, 30, 40, 50}
+	//sumInt64 := generics.Sum[int64](int64Slice)
+	//fmt.Println(sumInt64)
+	//
+	//float64Slice := []float64{20.5, 30.3, 40.2, 50.1}
+	//sumFloat64 := generics.Sum[float64](float64Slice)
+	//fmt.Println(sumFloat64)
+	//
+	//numericSlice := []int64{1, 2, 3, 4, 5}
+	//find, _ := generics.Contains(numericSlice, 8)
+	//fmt.Println(find)
 
 	// __ERROR__
 	//if err := myError.Error(); err != nil {
@@ -139,7 +141,7 @@ func main() {
 	//convert_type.Main()
 
 	// __ASSERT_TYPE__
-	assert_type.Main()
+	//assert_type.Main()
 
 	// __DATABASE__
 	//database.Main()

@@ -1,26 +1,43 @@
 package generics
 
-type IUser interface {
-	GetId(id int) int
+import "fmt"
+
+func Sum[T int64 | float64](slice []T) (sum T) {
+	sum = 0
+	for _, value := range slice {
+		sum += value
+	}
+	return
 }
 
-type User struct {
-	ID int
+type Numeric interface {
+	int64 | float64
 }
 
-func (u *User) GetId(id int) int {
-	u.ID = 35
-	return u.ID
+type Numbers[T Numeric] []T
+
+var ints Numbers[int64]
+
+func Contains[T Numeric](slice []T, element T) (bool, T) {
+	for _, el := range slice {
+		if el == element {
+			return true, el
+		}
+	}
+
+	return false, 0
 }
 
-func SumGeneric[T int | string](a, b T) T {
-	return a + b
+func Contains2[T comparable](slice []T, element T) bool {
+	for _, el := range slice {
+		if el == element {
+			return true
+		}
+	}
+
+	return false
 }
 
-func GetIdGeneric[T IUser](user T) T {
-	return user
-}
-
-func GetIdGenericTwo[T IUser](user *T) *T {
-	return user
+func Contains3[T any](elements ...T) {
+	fmt.Println(elements)
 }
